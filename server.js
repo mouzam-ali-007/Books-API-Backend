@@ -14,17 +14,14 @@ app.use(cors({
 
 //  Required to parse JSON request bodies
 app.use(express.json());
-
-//  Required if you're accepting URL-encoded form data
-app.use(express.urlencoded({ extended: true }));
-
+//  Required if you're accepting URL-encoded form dat
+// app.use(express.urlencoded({ extended: true }));
 app.use('/api', routes); // Use the routes
 
 // const uri = "mongodb+srv://aghnafaran:dde1JXf7whrt691D@cluster0.cewgt7u.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
-
 const uri = "mongodb://localhost:27017/booksApp"; // Local MongoDB URI
-const PORT = 8000;
+const PORT = 8001;
 
 mongoose
   .connect(uri, {
